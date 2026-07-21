@@ -1,0 +1,1807 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    background:#081729;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* =========================
+   CORES PRINCIPAIS
+
+   Azul: #0B1F3A
+   Dourado: #D4AF37
+========================= */
+
+
+
+:root{
+
+    --azul:#0B1F3A;
+
+    --azul-escuro:#081729;
+
+    --azul-claro:#163B6D;
+
+    --dourado:#D4AF37;
+
+    --branco:#ffffff;
+
+    --cinza:#dcdcdc;
+
+}
+
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#081729;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--dourado);
+
+    border-radius:20px;
+
+}
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+
+    padding:20px 8%;
+
+
+    background:rgba(8,23,41,.75);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-bottom:1px solid rgba(212,175,55,.2);
+
+
+    z-index:1000;
+
+
+    transition:.4s;
+
+}
+
+
+
+.logo img{
+
+    width:75px;
+
+}
+
+
+
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+
+nav a{
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+
+    position:relative;
+
+
+    transition:.3s;
+
+}
+
+
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+
+    width:0;
+
+    height:2px;
+
+
+    background:var(--dourado);
+
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:var(--dourado);
+
+}
+
+
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+
+.menu-mobile{
+
+    display:none;
+
+    font-size:28px;
+
+    color:var(--dourado);
+
+    cursor:pointer;
+
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero{
+
+    height:100vh;
+
+    width:100%;
+
+
+    position:relative;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+}
+
+
+
+.hero video{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+
+    object-fit:cover;
+
+}
+
+
+
+.overlay{
+
+    position:absolute;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+        rgba(8,23,41,.75),
+
+        rgba(8,23,41,.95)
+
+    );
+
+}
+
+
+
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+
+    text-align:center;
+
+
+    max-width:900px;
+
+
+    padding:20px;
+
+
+    animation:aparecer 1.5s;
+
+}
+
+
+
+.hero-logo{
+
+    width:160px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+.subtitulo{
+
+    color:var(--dourado);
+
+    letter-spacing:3px;
+
+    font-size:18px;
+
+}
+
+
+
+.hero h1{
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:60px;
+
+
+    margin:25px 0;
+
+
+    color:white;
+
+
+
+    text-shadow:
+
+    0 0 20px rgba(212,175,55,.4);
+
+
+}
+
+
+
+.hero p{
+
+    color:#eee;
+
+
+    font-size:20px;
+
+
+    line-height:1.8;
+
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+
+.btn{
+
+
+    display:inline-block;
+
+
+    padding:15px 40px;
+
+
+    background:var(--dourado);
+
+
+    color:#081729;
+
+
+    border-radius:50px;
+
+
+    font-weight:700;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.btn:hover{
+
+    background:white;
+
+
+    color:var(--dourado);
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+.btn-outline{
+
+
+    display:inline-block;
+
+
+    padding:15px 40px;
+
+
+    border:2px solid var(--dourado);
+
+
+    border-radius:50px;
+
+
+    color:white;
+
+
+    font-weight:600;
+
+
+    transition:.4s;
+
+}
+
+
+
+.btn-outline:hover{
+
+
+    background:var(--dourado);
+
+
+    color:#081729;
+
+
+}/* =========================
+   SEÇÕES GERAIS
+========================= */
+
+
+section{
+
+    padding:100px 8%;
+
+}
+
+
+
+section h2{
+
+
+    text-align:center;
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:42px;
+
+
+    color:var(--dourado);
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.titulo-menor{
+
+
+    color:var(--dourado);
+
+
+    letter-spacing:3px;
+
+
+    font-size:14px;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+.descricao{
+
+
+    text-align:center;
+
+
+    max-width:800px;
+
+
+    margin:0 auto 50px;
+
+
+    color:#ddd;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+/* =========================
+   QUEM SOMOS
+========================= */
+
+
+.sobre-home{
+
+
+    background:#0B1F3A;
+
+}
+
+
+
+.container{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    gap:60px;
+
+
+}
+
+
+
+.sobre-home .texto{
+
+
+    width:50%;
+
+
+}
+
+
+
+.sobre-home h2{
+
+
+    text-align:left;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+.sobre-home p{
+
+
+    color:#ddd;
+
+
+    line-height:2;
+
+
+    margin:25px 0;
+
+
+}
+
+
+
+.sobre-home .imagem{
+
+
+    width:45%;
+
+
+}
+
+
+
+.sobre-home .imagem img{
+
+
+    border-radius:25px;
+
+
+    border:2px solid var(--dourado);
+
+
+    box-shadow:
+
+    0 0 30px rgba(212,175,55,.25);
+
+
+}
+
+
+
+/* =========================
+   MISSÃO
+========================= */
+
+
+.missao{
+
+
+    background:#081729;
+
+
+}
+
+
+
+.cards{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(260px,1fr));
+
+
+    gap:30px;
+
+
+}
+
+
+
+.card{
+
+
+    background:
+
+    rgba(255,255,255,.05);
+
+
+    border:1px solid rgba(212,175,55,.25);
+
+
+    padding:40px 30px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+    transition:.4s;
+
+
+    backdrop-filter:blur(10px);
+
+
+}
+
+
+
+.card:hover{
+
+
+    transform:translateY(-12px);
+
+
+    border-color:var(--dourado);
+
+
+    box-shadow:
+
+    0 0 35px rgba(212,175,55,.25);
+
+
+}
+
+
+
+.card i{
+
+
+    font-size:55px;
+
+
+    color:var(--dourado);
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.card h3{
+
+
+    font-size:24px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.card p{
+
+
+    color:#ddd;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+/* =========================
+   SANTOS
+========================= */
+
+
+.destaque-santos{
+
+
+    background:#0B1F3A;
+
+
+}
+
+
+
+.santo{
+
+
+    background:#081729;
+
+
+    border-radius:25px;
+
+
+    overflow:hidden;
+
+
+    border:1px solid rgba(212,175,55,.2);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.santo:hover{
+
+
+    transform:translateY(-10px);
+
+
+    box-shadow:
+
+    0 0 30px rgba(212,175,55,.3);
+
+
+}
+
+
+
+.santo img{
+
+
+    width:100%;
+
+
+    height:300px;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+.santo h3{
+
+
+    text-align:center;
+
+
+    padding:25px;
+
+
+    color:white;
+
+
+    font-size:22px;
+
+
+}
+
+
+
+.centro{
+
+
+    text-align:center;
+
+
+    margin-top:45px;
+
+
+}
+
+
+
+/* =========================
+   ORAÇÕES
+========================= */
+
+
+.oracoes-home{
+
+
+    background:#081729;
+
+
+}
+
+
+
+.oracoes-home .container{
+
+
+    justify-content:center;
+
+
+}
+
+
+
+.oracoes-home .texto{
+
+
+    width:55%;
+
+
+}
+
+
+
+.oracoes-home h2{
+
+
+    text-align:left;
+
+
+}
+
+
+
+.oracoes-home p{
+
+
+    color:#ddd;
+
+
+    line-height:2;
+
+
+    margin:25px 0;
+
+
+}
+
+
+
+.oracao-box{
+
+
+    width:300px;
+
+
+    height:300px;
+
+
+    background:#0B1F3A;
+
+
+    border-radius:50%;
+
+
+    border:2px solid var(--dourado);
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.oracao-box i{
+
+
+    font-size:60px;
+
+
+    color:var(--dourado);
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+/* =========================
+   PEDIDO DE ORAÇÃO
+========================= */
+
+
+.pedido-home{
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #163B6D,
+
+    #081729
+
+    );
+
+
+    text-align:center;
+
+
+}
+
+
+
+.pedido-container{
+
+
+    max-width:800px;
+
+
+    margin:auto;
+
+
+}
+
+
+
+.pedido-container i{
+
+
+    font-size:70px;
+
+
+    color:var(--dourado);
+
+
+}
+
+
+
+.pedido-container p{
+
+
+    color:#eee;
+
+
+    font-size:18px;
+
+
+    margin:25px 0 35px;
+
+
+}
+
+
+
+/* =========================
+   FORMAÇÃO
+========================= */
+
+
+.formacao-home{
+
+
+    background:#0B1F3A;
+
+
+}
+
+
+
+.card-formacao{
+
+
+    background:#081729;
+
+
+    padding:35px;
+
+
+    border-radius:20px;
+
+
+    text-align:center;
+
+
+    border:1px solid rgba(212,175,55,.2);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.card-formacao:hover{
+
+
+    transform:translateY(-10px);
+
+
+    border-color:var(--dourado);
+
+
+}
+
+
+
+.card-formacao i{
+
+
+    font-size:50px;
+
+
+    color:var(--dourado);
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.card-formacao h3{
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+.card-formacao p{
+
+
+    color:#ddd;
+
+
+    line-height:1.7;
+
+
+}/* =========================
+   VERSÍCULO
+========================= */
+
+.versiculo{
+
+    min-height:350px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    background:
+
+    linear-gradient(
+
+        rgba(8,23,41,.9),
+
+        rgba(8,23,41,.9)
+
+    ),
+
+    url("../imagens/biblia.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+
+    text-align:center;
+
+}
+
+
+
+.versiculo-content{
+
+    max-width:800px;
+
+}
+
+
+
+.versiculo i{
+
+    color:var(--dourado);
+
+    font-size:45px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.versiculo h2{
+
+    color:white;
+
+    font-size:35px;
+
+}
+
+
+
+.versiculo p{
+
+    color:var(--dourado);
+
+    font-size:18px;
+
+    margin-top:20px;
+
+}
+
+
+
+/* =========================
+   CONTATO HOME
+========================= */
+
+
+.contato-home{
+
+    background:#081729;
+
+    text-align:center;
+
+}
+
+
+
+.contato-home p{
+
+    max-width:700px;
+
+    margin:25px auto 35px;
+
+    color:#ddd;
+
+    line-height:1.8;
+
+}
+
+
+
+.redes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.redes a{
+
+    width:55px;
+
+    height:55px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    background:#0B1F3A;
+
+
+    border:1px solid var(--dourado);
+
+
+    border-radius:50%;
+
+
+    color:var(--dourado);
+
+
+    font-size:22px;
+
+
+    transition:.4s;
+
+}
+
+
+
+.redes a:hover{
+
+
+    background:var(--dourado);
+
+
+    color:#081729;
+
+
+    transform:translateY(-8px);
+
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer{
+
+
+    background:#061221;
+
+
+    padding:70px 8% 30px;
+
+
+    border-top:1px solid rgba(212,175,55,.25);
+
+
+}
+
+
+
+.footer-content{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(250px,1fr));
+
+
+    gap:50px;
+
+
+}
+
+
+
+.footer-logo img{
+
+
+    width:90px;
+
+
+}
+
+
+
+.footer-logo h3{
+
+
+    color:var(--dourado);
+
+
+    font-family:'Cinzel',serif;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+footer h4{
+
+
+    color:var(--dourado);
+
+
+    font-size:20px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.footer-links{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:12px;
+
+
+}
+
+
+
+.footer-links a{
+
+
+    color:#ddd;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.footer-links a:hover{
+
+
+    color:var(--dourado);
+
+
+}
+
+
+
+.footer-contato p{
+
+
+    color:#ddd;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.footer-contato i{
+
+
+    color:var(--dourado);
+
+
+    margin-right:10px;
+
+
+}
+
+
+
+.footer-bottom{
+
+
+    margin-top:50px;
+
+
+    padding-top:25px;
+
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    color:#aaa;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+
+@keyframes aparecer{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+.card,
+.santo,
+.card-formacao{
+
+
+    animation:aparecer .8s ease;
+
+
+}
+
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+
+@media(max-width:900px){
+
+
+    nav{
+
+
+        position:fixed;
+
+
+        top:80px;
+
+
+        right:-100%;
+
+
+        width:280px;
+
+
+        height:100vh;
+
+
+        background:#081729;
+
+
+        flex-direction:column;
+
+
+        padding:40px;
+
+
+        transition:.4s;
+
+
+    }
+
+
+
+    nav.active{
+
+
+        right:0;
+
+
+    }
+
+
+
+    .menu-mobile{
+
+
+        display:block;
+
+
+    }
+
+
+
+    .container{
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .sobre-home .texto,
+
+    .sobre-home .imagem,
+
+    .oracoes-home .texto{
+
+
+        width:100%;
+
+
+    }
+
+
+
+    .hero h1{
+
+
+        font-size:38px;
+
+
+    }
+
+
+
+    .hero p{
+
+
+        font-size:16px;
+
+
+    }
+
+
+
+    .hero-buttons{
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    section{
+
+
+        padding:70px 5%;
+
+
+    }
+
+
+
+    section h2{
+
+
+        font-size:30px;
+
+
+    }
+
+
+
+    .hero-logo{
+
+
+        width:120px;
+
+
+    }
+
+
+
+    .santo img{
+
+
+        height:250px;
+
+
+    }
+
+
+
+    .footer-bottom{
+
+
+        flex-direction:column;
+
+
+        text-align:center;
+
+
+        gap:15px;
+
+
+    }
+
+
+
+}/* ANIMAÇÃO JS */
+
+.animar{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s;
+
+}
+
+
+.mostrar{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/* BOTÃO TOPO */
+
+
+.topo{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+
+    width:55px;
+
+    height:55px;
+
+
+    border-radius:50%;
+
+
+    border:none;
+
+
+    background:#D4AF37;
+
+
+    color:#081729;
+
+
+    font-size:22px;
+
+
+    cursor:pointer;
+
+
+    opacity:0;
+
+
+    pointer-events:none;
+
+
+    transition:.4s;
+
+
+    z-index:999;
+
+}
+
+
+
+.mostrar-topo{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
